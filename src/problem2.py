@@ -2,12 +2,13 @@
 Exam 3, problem 2.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  October 2018.
+         their colleagues and Alec Polster.  October 2018.
 
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
 import testing_helper
+import builtins
 
 
 def main():
@@ -90,10 +91,16 @@ def problem2(sequence):
       :type sequence [list]
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
-
+    maximum = sequence[0]
+    maxindex = 0
+    for k in range(len(sequence)):
+        if builtins.abs(sequence[k]) > maximum:
+            maxindex = k
+            maximum = builtins.abs(sequence[k])
+    return maxindex
 
 ###############################################################################
 # Our tests use the following to print error messages in red.
